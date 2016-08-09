@@ -1,0 +1,103 @@
+/* general styling */
+
+body{
+  background-color:#195D19;
+  #page{
+    padding-left:1em;
+    padding-right:1em;
+    background-color:#fff;
+  }
+}
+
+// tags in one line
+.field-name-field-tags{
+  .field-item{
+    display:inline-block;
+    margin-right:0.5em;
+    a{
+      color:orange;
+    }
+  }
+}
+// header
+#header{
+  padding-left:1em;
+  padding-right:1em;
+  background-color: #cfc;
+  padding-top: 1em;
+  border:1px solid #0c0;
+  .header__site-link:link{
+    color:#fff;
+    font-weight:normal;
+  }
+}
+// breadcrumbs
+.breadcrumb{
+  font-size:0.75em;
+  color:#666;
+  margin-top: 2em;
+  a{
+    color:#666;
+    text-decoration: none;
+    &:after{
+      //content:">";
+      padding-left: 0.5em;
+    }
+  }
+}
+// main menu
+#navigation{
+  text-align:center;
+  #main-menu{
+    .links{
+      li{
+        float:none;
+        a{
+          background-color: #E87706;
+          border-radius: 2em;
+          padding: 1em;
+          text-decoration: none;
+          color: #FFF;
+          border: 7px solid #fff;
+          &:hover,&:focus{
+            background-color: #fff;
+            color: #333;
+            border:1px solid #0c0;
+            padding:22px;
+          }
+        }
+      }
+    }
+  } 
+}
+
+// dateblock for article content type
+.dateblock{
+  display: inline-block;
+  width: 84px;
+  float: left;
+  margin: 6px 1em 12px 0;
+  text-align:center;
+  .day{
+    background-color: #ddd;
+    display:block;
+    padding: 20px 6px 9px;
+    font-size: 2em;
+  }
+  .month{
+    background-color: #666;
+    display:block;
+    padding: 3px;
+    color:#fff;
+  }
+  .year{
+    background-color: #ddd;
+    display: block;
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    color: #999;
+    padding: 3px;
+  }
+}
+
+
