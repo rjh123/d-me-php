@@ -242,22 +242,30 @@ function subzen_preprocess_node(&$variables, $hook) {
 //   kpr($variables);
 // }
 
-// get variables for article node type, then use "created" property of node object and create variables for day, month, year and use custom date parts (had to create the node--article.tpl.php)
+// ADD NEW VARIABLES- get variables for article node type, then use "created" property of node object and create variables for day, month, year and use custom date parts (had to create the node--article.tpl.php)
 function subzen_preprocess_node(&$variables){
   //dpm($variables);
 
   if($variables['type'] == 'article'){
    // $variables['classes_array'][] = "rick";
+    // create a shortcut for $variables['node']
     $node = $variables['node'];
+    // add "rick" as a class
     $variables['classes_array'][] = "rick";
-    
+    // add new variables- and make sure I add them to the variables array ($variables['...'])
+    // and use php.net to get what I need for the date parts
+    // format_date is a  drupal api function I can use to see the parameters
     $variables['submitted_day'] = format_date($node->created,'custom','j');
     $variables['submitted_month'] = format_date($node->created,'custom','M');
     $variables['submitted_year'] = format_date($node->created,'custom','Y');
   }
   else if($variables['type'] !== 'article'){
+    // add the class of  "not-article" to nodes of content types other than articles
     $variables['classes_array'][] = "not-article";
   }
+  // so above date to be printed out in node--article.tpl.php as <?php print $submitted_day; ...
+
+
 
 // // figure out rti sub image of none for some resources
 //    if ($variables['type'] == 'resource'){
